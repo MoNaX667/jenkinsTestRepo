@@ -1,3 +1,5 @@
+#!/usr/bin/bash
+
 # Program for Fibonacci
 # Series
 
