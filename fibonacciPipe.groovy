@@ -22,20 +22,20 @@ pipeline{
 
         stage('Generate finonacci sequence by relative path'){
             steps{
-                sh("./scripts/fibonnacci.sh ${env.NUMBER}")
+                sh("./scripts/fibonacci.sh ${env.NUMBER}")
             }
         }
 
         stage('Generate finonacci sequence by full path'){
             steps{
-                sh("${env.WORKSPACE}/scripts/fibonnacci.sh ${env.NUMBER}")
+                sh("${env.WORKSPACE}/scripts/fibonacci.sh ${env.NUMBER}")
             }
         }
 
         stage('Generate finonacci from script folder'){
             steps{
                 dir("${env.WORKSPACE}/scripts"){
-                    sh("./fibonnacci.sh ${env.NUMBER}")
+                    sh("./fibonacci.sh ${env.NUMBER}")
                 }
             }
         }
