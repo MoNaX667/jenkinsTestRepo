@@ -16,9 +16,9 @@ echo "Generating Fibonacci series for : "
   
 for (( i=0; i<maxValue; i++ ))
 do
-    echo -n "$firstNumber) $firstNumber "
-    sum=$((a + b))
+    echo -n -e "$((i + 1))) $firstNumber \n"
+    sum=$((firstNumber + secondNumber))
     firstNumber=$secondNumber
-    b=$sum
+    secondNumber=$sum
 done
 # End of for loop
