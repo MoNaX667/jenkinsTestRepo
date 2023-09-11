@@ -1,6 +1,10 @@
 pipeline{
     agent any
 
+    triggers {
+        cron '@midnight'
+    }
+
     stages{
         stage('TEST'){
             steps{
