@@ -46,7 +46,8 @@ pipeline {
     post {
         always {
             echo "Collecting jUnit test results..."
-            junit allowEmptyResults: true, testResults: '**/TEST-com.learningjenkins.AppTest.xml'
+            junit allowEmptyResults: true, 
+                testResults: '**/TEST-com.learningjenkins.AppTest.xml'
             
             echo "Collecting Code Coverage results ..."
             publishCoverage adapters: [cobertura('**/coverage.xml')],
